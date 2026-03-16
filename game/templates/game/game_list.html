@@ -9,6 +9,13 @@
 
     <h1>Game List</h1>
     <table>
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>Rate</th>
+            <th>Is Free?</th>
+        </tr>
        {% for g in games %}
         <tr>
             <td>{{ g.title }}</td>
