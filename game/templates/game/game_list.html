@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game List</title>
+</head>
+<body>
+
+    <h1>Game List</h1>
+    <table>
+       {% for g in games %}
+        <tr>
+            <td>{{ g.title }}</td>
+            <td>{{ g.genre }}</td>
+            <td>{{ g.year }}</td>
+            <td>{{ g.rate }}</td>
+            <td>{{ g.is_free }}</td>
+        </tr>
+       {% endfor %} 
+
+    </table>
+
+</body>
+</html>
