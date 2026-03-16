@@ -6,7 +6,7 @@ from django.db import models
 class Game(models.Model):
   title = models.CharField(max_length=100)
   genre = models.CharField(max_length=50)
-  year = models.IntegerField(max_length=4)
+  year = models.PositiveIntegerField()
   rate = models.FloatField()
   is_free = models.BooleanField(default=True)
   

@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game List</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <style>
+        body {font-family: "Times New Roman", Georgia, Serif;}
+            h1, h2, h3, h4, h5, h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Game List</h1>
-    <table>
+    <table border="1px">
         <tr>
             <th>Title</th>
             <th>Genre</th>
@@ -22,8 +30,10 @@
             <td>{{ g.genre }}</td>
             <td>{{ g.year }}</td>
             <td>{{ g.rate }}</td>
-            <td>{{ g.is_free }}</td>
+            <td>{% if g.is_free %}Yes{% else %}NO {% endif %}</td>
         </tr>
+        {% empty %}
+        <p>No game available</p>
        {% endfor %} 
 
     </table>
